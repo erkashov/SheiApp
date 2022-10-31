@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="87e7020eb5534a9c92824467963d2deb" Name="Diagram1">
+        <EntityTypeShape EntityType="ShveiModel.Cvet" Width="1.5" PointX="0.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.Furnitura" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.FurnituraIzdeliya" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.Izdelie" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.MaterialSostav" Width="1.5" PointX="0.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.Polzovatel" Width="1.5" PointX="1.5" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.Risunok" Width="1.5" PointX="3.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.Rulon" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.SkladFurnitury" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.SkladTkani" Width="1.5" PointX="8.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.sysdiagram" Width="1.5" PointX="10.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.TipFurnitury" Width="1.5" PointX="3.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.Tkan" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.Zakaz" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveiModel.ZakazannieIzdeliya" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="ShveiModel.FK_Rulon_Cvet" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_Tkan_Cvet" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_Furnitura_TipFurnitury" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_FurnituraIzdeliya_Furnitura" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_SkladFurnitury_Furnitura" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_FurnituraIzdeliya_Tkan" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_ZakazannieIzdeliya_Izdelie" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_Rulon_MaterialSostav" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_Zakaz_Polzovatel" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_Zakaz_Polzovatel1" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_Tkan_Risunok" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_SkladTkani_Tkan" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.FK_ZakazannieIzdeliya_Zakaz" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.RulonIzdelie" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.SostavTkanei" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveiModel.TkaniIzdeliya" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
