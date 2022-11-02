@@ -30,6 +30,7 @@ namespace SheiApp.Windows
             tkani.Visibility = Global.Polzovatel.Role == "Кладовщик" ? Visibility.Visible : Visibility.Collapsed;
             fur.Visibility = Global.Polzovatel.Role == "Кладовщик" ? Visibility.Visible : Visibility.Collapsed;
             post.Visibility = Global.Polzovatel.Role == "Кладовщик" ? Visibility.Visible : Visibility.Collapsed;
+            otchety.Visibility = Global.Polzovatel.Role == "Директор" ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -62,7 +63,12 @@ namespace SheiApp.Windows
 
         private void post_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new FurnituraWindow());
+            mainFrame.Navigate(new PostupleniyaWindow());
+        }
+
+        private void otchety_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new OtchetyWindow());
         }
     }
 }

@@ -148,6 +148,9 @@
     <Compile Include="Windows\OtchetyWindow.xaml.cs">
       <DependentUpon>OtchetyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\PostupleniyaWindow.xaml.cs">
+      <DependentUpon>PostupleniyaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\RegWindow.xaml.cs">
       <DependentUpon>RegWindow.xaml</DependentUpon>
     </Compile>
@@ -259,6 +262,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\OtchetyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PostupleniyaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
