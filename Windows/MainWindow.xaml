@@ -13,8 +13,13 @@
                     <DockPanel HorizontalAlignment="Stretch"/>
                 </ItemsPanelTemplate>
             </Menu.ItemsPanel>
+            <MenuItem x:Name="zak" Header="Заказы" Click="MenuItem_Click_1"/>
+            <MenuItem x:Name="izd" Header="Изделия" Click="MenuItem_Click_2"/>
+            <MenuItem x:Name="tkani" Header="Ткани" Click="MenuItem_Click_3"/>
+            <MenuItem x:Name="fur" Header="Фурнитура" Click="MenuItem_Click_4"/>
+            <MenuItem x:Name="post" Header="Постпления товаров" Click="post_Click"/>
             <MenuItem Header="Выйти" Click="MenuItem_Click" HorizontalAlignment="Right"/>
         </Menu>
-        <Frame x:Name="mainFrame"/>
+        <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden"/>
     </DockPanel>
 </Window>

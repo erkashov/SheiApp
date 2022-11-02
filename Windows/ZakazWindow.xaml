@@ -1,0 +1,70 @@
+﻿<Page x:Class="SheiApp.Windows.ZakazWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SheiApp.Windows"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Заказ">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="100">
+            <TextBlock Text="Номер"/>
+            <TextBox x:Name="nomerTB" Text="{Binding Zakaz.Nomer}"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Grid.Row="0" Grid.Column="1">
+            <TextBlock Text="Дата"/>
+            <DatePicker SelectedDate="{Binding Zakaz.Data}"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Grid.Row="0" Grid.Column="2">
+            <TextBlock Text="Сумма"/>
+            <TextBlock Text="{Binding Zakaz.Summa}"/>
+        </StackPanel>
+
+        <Button x:Name="sohrBtn" Content="Сохранить" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Click="sohrBtn_Click"/>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Grid.Row="1">
+            <TextBlock Text="Заказчик"/>
+            <ComboBox x:Name="zakazchikTB" ItemsSource="{Binding Polzovatels}" SelectedItem="{Binding Zakaz.Polzovatel}" SelectedValuePath="Login" DisplayMemberPath="Login"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="Статус"/>
+            <TextBox x:Name="statusTB" Text="{Binding Zakaz.Etap}"/>
+        </StackPanel>
+
+        <Button x:Name="addBtn" Content="Добавить изделие" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" Click="addBtn_Click"/>
+
+        <DataGrid ItemsSource="{Binding Zakaz.ZakazannieIzdeliyas}" Grid.Row="3" Grid.ColumnSpan="5" CanUserAddRows="False" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Изделие" Binding="{Binding Izdelie.Naimenovanie}"/>
+                <DataGridTextColumn Header="Кол-во" Binding="{Binding Kolichestvo}"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding Summa}" IsReadOnly="True"/>
+                <DataGridTemplateColumn Header="...">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Удалить" Click="Button_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>

@@ -45,5 +45,11 @@ namespace SheiApp
                 this.Close();
             }
         }
+
+        private void regBtn_Click(object sender, RoutedEventArgs e)
+        {
+            new RegWindow().Show();
+            this.Close();
+        }
     }
 }

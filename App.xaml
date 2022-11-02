@@ -15,5 +15,10 @@
         <Style  TargetType="{x:Type TextBox}">
             <Setter Property="FontSize" Value="15"/>
         </Style>
+
+        <Style TargetType="DataGrid">
+            <Setter Property="RowBackground" Value="#D1EEFC"/>
+            <Setter Property="AlternatingRowBackground" Value="#FFFCD6"/>
+        </Style>
     </Application.Resources>
 </Application>

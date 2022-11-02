@@ -1,20 +1,21 @@
-﻿<Window x:Class="SheiApp.AuthWindow"
+﻿<Window x:Class="SheiApp.Windows.RegWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SheiApp"
+        xmlns:local="clr-namespace:SheiApp.Windows"
         mc:Ignorable="d"
-        Title="Авторизация" Height="200" Width="300" MinHeight="200" MinWidth="300" WindowStartupLocation="CenterScreen">
+        Title="Регистрация" Height="230" Width="300" MinHeight="200" MinWidth="300" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
             <TextBlock Text="Логин"/>
             <TextBox x:Name="loginTB"/>
             <TextBlock Text="Пароль"/>
-            <TextBox x:Name="parolTB"/>
+            <PasswordBox PasswordChar="*" x:Name="parolTB"/>
+            <TextBlock Text="Повторите пароль"/>
+            <PasswordBox PasswordChar="*" x:Name="parol2TB"/>
             <Grid Margin="0 5">
-                <Button x:Name="voitiBtn" Content="Войти" HorizontalAlignment="Left" Click="voitiBtn_Click"/>
-                <Button x:Name="regBtn" Content="Регистрация" HorizontalAlignment="Right" Click="regBtn_Click"/>
+                <Button x:Name="regBtn" Content="Регистрация" Click="regBtn_Click" HorizontalAlignment="Center"/>
             </Grid>
         </StackPanel>
     </Grid>

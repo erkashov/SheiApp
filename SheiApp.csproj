@@ -38,6 +38,9 @@
     <Win32Resource>
     </Win32Resource>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo-02.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -88,6 +91,8 @@
       <DependentUpon>ShveiModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Global.cs" />
+    <Compile Include="Models\Izdelie.cs" />
+    <Compile Include="Models\Zakaz.cs" />
     <Compile Include="Polzovatel.cs">
       <DependentUpon>ShveiModel.tt</DependentUpon>
     </Compile>
@@ -128,8 +133,35 @@
     <Compile Include="Tkan.cs">
       <DependentUpon>ShveiModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Windows\FurnituraWindow.xaml.cs">
+      <DependentUpon>FurnituraWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\IzdelieWindow.xaml.cs">
+      <DependentUpon>IzdelieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\IzdeliyaWindow.xaml.cs">
+      <DependentUpon>IzdeliyaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OtchetyWindow.xaml.cs">
+      <DependentUpon>OtchetyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\RegWindow.xaml.cs">
+      <DependentUpon>RegWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TkaniWindow.xaml.cs">
+      <DependentUpon>TkaniWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\VspolWindow.xaml.cs">
+      <DependentUpon>VspolWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ZakazWindow.xaml.cs">
+      <DependentUpon>ZakazWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Zakazy.xaml.cs">
+      <DependentUpon>Zakazy.xaml</DependentUpon>
     </Compile>
     <Compile Include="Zakaz.cs">
       <DependentUpon>ShveiModel.tt</DependentUpon>
@@ -189,6 +221,7 @@
     <None Include="Resources\logo-04.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="logo-02.ico" />
     <Content Include="ShveiModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ShveiModel.Context.cs</LastGenOutput>
@@ -209,7 +242,43 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\FurnituraWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\IzdelieWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\IzdeliyaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OtchetyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\RegWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\TkaniWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\VspolWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ZakazWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Zakazy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
