@@ -12,7 +12,11 @@ namespace SheiApp
         public static ShveiEntities GetContext
         {
             get
-            {
+                
+                
+                
+                
+                
                 if (_context == null) _context = new ShveiEntities();
                 return _context;
             }
